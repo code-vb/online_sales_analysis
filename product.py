@@ -7,7 +7,7 @@ class Product:
         
         
     def display_info(self):
-        print(f"Proizvod: {self.name}, Cena: {self.price}, Količina: {self.quantity} kom.")
+        print(f"Proizvod: {self.name}, Cena: {self.price} din., Količina: {self.quantity} kom.")
         #Metod za prikazivanje informacija o proizvodu
         
     def update_quantity(self, amount):
