@@ -17,7 +17,7 @@ class ProductManager:
             
     def total_value(self):
         try:
-            return sum(p.price * p.quantity for p in self.products)  #Prikaz ukupne vrednosti proizvoda
+            return sum(p.price * p.quantity for p in self.products) #Prikaz ukupne vrednosti proizvoda
         except TypeError:
             print("Greška: Neki proizvodi imaju neispravnu cenu ili količinu.")
         #try except blok kao zaštita od pucanja programa ukoliko je neki podatak pogrešan
