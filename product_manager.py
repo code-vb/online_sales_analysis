@@ -22,6 +22,14 @@ class ProductManager:
             print("Greška: Neki proizvodi imaju neispravnu cenu ili količinu.")
         #try except blok kao zaštita od pucanja programa ukoliko je neki podatak pogrešan
         
+    def remove_product(self, name):
+        pocetni_broj = len(self.products) #Dužina liste postaje vrednost promenljive
+        self.products = [p for p in self.products if p.name != name] #Brisanje proizvoda
+        
+        if len(self.products) == pocetni_broj: #Upoređivanje dužine liste nakon brisanja i ispis prema stanju
+            print(f"Obaveštenje: Proizvod '{name}' nije pronađen.")
+        else:
+            print(f"Proizvod: '{name}' je uspešno uklonjen.")        
     
         
     
